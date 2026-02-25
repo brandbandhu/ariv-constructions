@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Building2, ClipboardCheck, Truck, PenTool, ArrowRight, Shield, Leaf, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import CounterNumber from "@/components/CounterNumber";
-import { services, projects } from "@/data/siteData";
+import { getProjectSlug, services, projects } from "@/data/siteData";
 
 import hero1 from "@/assets/images/hero-construction-1.jpg";
 import hero2 from "@/assets/images/hero-construction-2.jpg";
@@ -205,15 +205,17 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.slice(0, 6).map((p, i) => (
               <AnimatedSection key={p.name} delay={i * 0.08}>
-                <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                  <img src={p.image} alt={`Ariv Buildcon ${p.name} project`} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent text-accent-foreground">{p.value}</span>
-                    <h3 className="font-heading text-lg font-bold text-primary-foreground mt-2">{p.name}</h3>
-                    <p className="text-xs text-primary-foreground/70">{p.location}</p>
+                <Link to={`/projects/${getProjectSlug(p.name)}`} className="block">
+                  <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src={p.image} alt={`Ariv Buildcon ${p.name} project`} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent text-accent-foreground">{p.value}</span>
+                      <h3 className="font-heading text-lg font-bold text-primary-foreground mt-2">{p.name}</h3>
+                      <p className="text-xs text-primary-foreground/70">{p.location}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>

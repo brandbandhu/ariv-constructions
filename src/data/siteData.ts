@@ -1,9 +1,9 @@
-import datwaylerImg from "@/assets/images/datwayler-pharma.jpg";
-import balasahebImg from "@/assets/images/balasaheb-deoras.jpg";
-import nichinoImg from "@/assets/images/nichino-india.jpg";
-import srimsImg from "@/assets/images/srims-medical.jpg";
-import moninImg from "@/assets/images/monin-hyderabad.jpg";
-import bridgestoneImg from "@/assets/images/bridgestone-chakan.jpg";
+import datwaylerImg from "@/assets/images/DATWAYLER PHARMA/DATWAYLER PHARMA-1.png";
+import balasahebImg from "@/assets/images/Balasheb Deoras Rugnalay/Balasheb Deoras Rugnalay-4.png";
+import nichinoImg from "@/assets/images/NICHINO INDIA PRIVATE LIMITED/NICHINO INDIA PRIVATE LIMITED-5.png";
+import srimsImg from "@/assets/images/SRIMS Medical College Sambhajinagar/SRIMS Medical College Sambhajinagar-4.png";
+import moninImg from "@/assets/images/Monin Hyderabad/Monin Hyderabad-5.png";
+import bridgestoneImg from "@/assets/images/Bridgestone Chakan/Bridgestone Chakan-1.png";
 import thermaxImg from "@/assets/images/thermax-shirwal.jpg";
 import embassyImg from "@/assets/images/embassy-horizon.jpg";
 import asianPaintsImg from "@/assets/images/asian-paints.jpg";
@@ -23,6 +23,12 @@ export interface Project {
   image: string;
   status: "Ongoing" | "Completed";
 }
+
+export const getProjectSlug = (projectName: string) =>
+  projectName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
 export const projects: Project[] = [
   { name: "Datwayler Pharma", location: "Maharashtra", value: "1.8 CR", valueNum: 180, year: "Ongoing", image: datwaylerImg, status: "Ongoing" },

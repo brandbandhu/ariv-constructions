@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
-import arivLogo from "@/assets/images/ariv-logo.jpg";
+import arivLogo from "@/assets/images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="section-dark">
+    <footer className="section-dark mt-10 md:mt-14">
       <div className="container mx-auto py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -45,11 +45,27 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="font-heading text-lg font-bold text-primary-foreground mb-5">Services</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li>Turnkey Solutions</li>
-              <li>Project Management</li>
-              <li>Heavy Machinery Rental</li>
-              <li>Design & Build</li>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Turnkey Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Project Management
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Heavy Machinery Rental
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Design & Build
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { navLinks } from "@/data/siteData";
-import arivLogo from "@/assets/images/ariv-logo.jpg";
+import arivLogo from "@/assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,12 +71,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="ml-3 gradient-accent px-5 py-2.5 rounded-lg text-sm font-bold text-accent-foreground shadow-md hover:shadow-lg transition-shadow"
-            >
-              Get Quote
-            </Link>
           </nav>
 
           {/* Mobile toggle */}
@@ -105,12 +99,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/contact"
-                className="mt-2 gradient-accent px-5 py-3 rounded-lg text-sm font-bold text-accent-foreground text-center"
-              >
-                Get Quote
-              </Link>
             </nav>
           </div>
         )}

@@ -13,6 +13,11 @@ import bktImg from "@/assets/images/BKT Aurangabad/BKT Aurangabad-3.png";
 import jFoodImg from "@/assets/images/J food Products Sortapwadi Pune/J food Products Sortapwadi Pune-1.png";
 import bajajImg from "@/assets/images/bajaj-auto.jpg";
 import microsoftImg from "@/assets/images/Microsoft Hayatabad Telangana/Microsoft Hayatabad Telangana-2.png";
+import serviceTurnkeyImg from "@/assets/images/hero-construction-1.jpg";
+import serviceProjectMgmtImg from "@/assets/images/hero-construction-2.jpg";
+import serviceMachineryImg from "@/assets/images/machine .png";
+import serviceDesignBuildImg from "@/assets/images/about-hero.jpg";
+import serviceFabricationImg from "@/assets/images/fabrication.png";
 
 export interface Project {
   name: string;
@@ -51,21 +56,31 @@ export const services = [
     title: "Turnkey Solution",
     description: "Managing every aspect of the construction process from inception to completion for seamless and timely delivery.",
     icon: "Building2" as const,
+    image: serviceTurnkeyImg,
   },
   {
     title: "Project Management",
     description: "Experienced project managers ensuring quality control and adherence to timelines at every construction phase.",
     icon: "ClipboardCheck" as const,
+    image: serviceProjectMgmtImg,
   },
   {
     title: "Heavy Machinery Rental",
     description: "Offering a wide range of state-of-the-art heavy machinery and earth movers for various construction needs.",
     icon: "Truck" as const,
+    image: serviceMachineryImg,
   },
   {
     title: "Design & Build",
     description: "Providing integrated design and construction services to enhance efficiency and reduce costs.",
     icon: "PenTool" as const,
+    image: serviceDesignBuildImg,
+  },
+  {
+    title: "Fabrication",
+    description: "Delivering reliable structural and custom fabrication solutions with precision engineering and quality workmanship.",
+    icon: "Building2" as const,
+    image: serviceFabricationImg,
   },
 ];
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, ClipboardCheck, Truck, PenTool, ArrowRight, Shield, Leaf, Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Shield, Leaf, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import CounterNumber from "@/components/CounterNumber";
 import { getProjectSlug, services, projects } from "@/data/siteData";
@@ -17,8 +17,6 @@ const heroSlides = [
   { image: hero2, title: "Engineering", highlight: "Excellence", sub: "Industrial Construction at Scale" },
   { image: hero3, title: "Powering", highlight: "Infrastructure", sub: "Heavy Machinery & Turnkey Solutions" },
 ];
-
-const iconMap: Record<string, any> = { Building2, ClipboardCheck, Truck, PenTool };
 
 const Index = () => {
   const [current, setCurrent] = useState(0);
@@ -134,28 +132,36 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20">
+      <section className="py-20 section-light">
         <div className="container mx-auto text-center mb-12">
           <AnimatedSection>
-            <span className="text-accent font-semibold uppercase text-sm tracking-wider">What We Do</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2">Our Services</h2>
+            <span className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-[2px] text-accent">
+              What We Do
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-3">Our Services</h2>
+            <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+              A high-performance service stack built to keep industrial projects on time and on budget.
+            </p>
           </AnimatedSection>
         </div>
-        <div className="container mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s, i) => {
-            const Icon = iconMap[s.icon];
-            return (
-              <AnimatedSection key={s.title} delay={i * 0.1}>
-                <div className="glass-card-light p-8 h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
-                  <div className="gradient-accent w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <Icon className="h-7 w-7 text-accent-foreground" />
-                  </div>
+        <div className="container mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+          {services.map((s, i) => (
+            <AnimatedSection key={s.title} delay={i * 0.1}>
+              <div className="rounded-2xl border border-border/70 bg-card h-full shadow-[0_14px_35px_rgba(14,42,71,0.08)] hover:shadow-[0_20px_50px_rgba(14,42,71,0.14)] hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                <div className="overflow-hidden rounded-t-2xl">
+                  <img
+                    src={s.image}
+                    alt={`${s.title} service`}
+                    className="w-full h-44 object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
                   <h3 className="font-heading text-xl font-bold text-primary mb-3">{s.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{s.description}</p>
                 </div>
-              </AnimatedSection>
-            );
-          })}
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 

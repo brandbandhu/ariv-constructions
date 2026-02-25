@@ -7,15 +7,11 @@ import { getProjectSlug, projects } from "@/data/siteData";
 import heroImg from "@/assets/images/hero-construction-1.jpg";
 
 type Filter = "All" | "Ongoing" | "Completed";
-type Sort = "none" | "high" | "low";
 
 const Projects = () => {
   const [filter, setFilter] = useState<Filter>("All");
-  const [sort, setSort] = useState<Sort>("none");
 
   let filtered = filter === "All" ? projects : projects.filter((p) => p.status === filter);
-  if (sort === "high") filtered = [...filtered].sort((a, b) => b.valueNum - a.valueNum);
-  if (sort === "low") filtered = [...filtered].sort((a, b) => a.valueNum - b.valueNum);
 
   return (
     <>
@@ -37,15 +33,6 @@ const Projects = () => {
                 {f}
               </button>
             ))}
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value as Sort)}
-              className="rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-semibold text-foreground"
-            >
-              <option value="none">Sort by Value</option>
-              <option value="high">Highest First</option>
-              <option value="low">Lowest First</option>
-            </select>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -70,10 +57,7 @@ const Projects = () => {
                       </span>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <span className="rounded-full bg-accent/90 px-3 py-1 text-xs font-bold text-accent-foreground">
-                        {p.value}
-                      </span>
-                      <h3 className="mt-2 font-heading text-lg font-bold text-primary-foreground">{p.name}</h3>
+                      <h3 className="font-heading text-lg font-bold text-primary-foreground">{p.name}</h3>
                       <div className="mt-1 flex items-center gap-1 text-xs text-primary-foreground/70">
                         <MapPin className="h-3 w-3" /> {p.location}
                         {p.year && <span className="ml-2">&bull; {p.year}</span>}

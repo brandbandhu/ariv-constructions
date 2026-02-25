@@ -31,6 +31,31 @@ import monin4Img from "@/assets/images/Monin Hyderabad/Monin Hyderabad-4.png";
 import monin5Img from "@/assets/images/Monin Hyderabad/Monin Hyderabad-5.png";
 import bridgestone1Img from "@/assets/images/Bridgestone Chakan/Bridgestone Chakan-1.png";
 import bridgestone2Img from "@/assets/images/Bridgestone Chakan/Bridgestone Chakan-2.png";
+import thermax1Img from "@/assets/images/Thermax Shirwal/Thermax Shirwal-1.png";
+import thermax2Img from "@/assets/images/Thermax Shirwal/Thermax Shirwal-2.png";
+import thermax3Img from "@/assets/images/Thermax Shirwal/Thermax Shirwal-3.png";
+import thermax4Img from "@/assets/images/Thermax Shirwal/Thermax Shirwal-4.png";
+import embassy1Img from "@/assets/images/Embassy-Horizon Industrial Park Chakan/Embassy-Horizon Industrial Park Chakan-1.png";
+import embassy2Img from "@/assets/images/Embassy-Horizon Industrial Park Chakan/Embassy-Horizon Industrial Park Chakan-2.png";
+import embassy3Img from "@/assets/images/Embassy-Horizon Industrial Park Chakan/Embassy-Horizon Industrial Park Chakan-3.png";
+import carlsberg1Img from "@/assets/images/Carlsberg Mysore/Carlsberg Mysore-1.png";
+import carlsberg2Img from "@/assets/images/Carlsberg Mysore/Carlsberg Mysore-2.png";
+import asianPaints1Img from "@/assets/images/Asian Paints - Infrastructure Work/Asian Paints - Infrastructure Work-1.png";
+import asianPaints2Img from "@/assets/images/Asian Paints - Infrastructure Work/Asian Paints - Infrastructure Work-2.png";
+import asianPaints3Img from "@/assets/images/Asian Paints - Infrastructure Work/Asian Paints - Infrastructure Work-3.png";
+import berger1Img from "@/assets/images/Berger Paints Jejuri/Berger Paints Jejuri-1.png";
+import berger2Img from "@/assets/images/Berger Paints Jejuri/Berger Paints Jejuri-2.png";
+import berger3Img from "@/assets/images/Berger Paints Jejuri/Berger Paints Jejuri-3.png";
+import bkt1Img from "@/assets/images/BKT Aurangabad/BKT Aurangabad-1.png";
+import bkt2Img from "@/assets/images/BKT Aurangabad/BKT Aurangabad-2.png";
+import bkt3Img from "@/assets/images/BKT Aurangabad/BKT Aurangabad-3.png";
+import jFood1Img from "@/assets/images/J food Products Sortapwadi Pune/J food Products Sortapwadi Pune-1.png";
+import jFood2Img from "@/assets/images/J food Products Sortapwadi Pune/J food Products Sortapwadi Pune-2.png";
+import microsoft1Img from "@/assets/images/Microsoft Hayatabad Telangana/Microsoft Hayatabad Telangana-1.png";
+import microsoft2Img from "@/assets/images/Microsoft Hayatabad Telangana/Microsoft Hayatabad Telangana-2.png";
+import bajaj1Img from "@/assets/images/Bajaj Auto Pvt. Ltd Chakan/Bajaj Auto Pvt. Ltd Chakan-1.png";
+import bajaj2Img from "@/assets/images/Bajaj Auto Pvt. Ltd Chakan/Bajaj Auto Pvt. Ltd Chakan-2.png";
+import bajaj3Img from "@/assets/images/Bajaj Auto Pvt. Ltd Chakan/Bajaj Auto Pvt. Ltd Chakan-3.png";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -84,6 +109,24 @@ const ProjectDetail = () => {
           ? [monin1Img, monin2Img, monin3Img, monin4Img, monin5Img]
         : project.name === "Bridgestone Chakan"
           ? [bridgestone1Img, bridgestone2Img]
+        : project.name === "Thermax Shirwal"
+          ? [thermax1Img, thermax2Img, thermax3Img, thermax4Img]
+        : project.name === "Embassy Horizon"
+          ? [embassy1Img, embassy2Img, embassy3Img]
+        : project.name === "Carlsberg Mysore"
+          ? [carlsberg1Img, carlsberg2Img]
+        : project.name === "Asian Paints"
+          ? [asianPaints1Img, asianPaints2Img, asianPaints3Img]
+        : project.name === "Berger Paints Jejuri"
+          ? [berger1Img, berger2Img, berger3Img]
+        : project.name === "BKT Aurangabad"
+          ? [bkt1Img, bkt2Img, bkt3Img]
+        : project.name === "J Food Products"
+          ? [jFood1Img, jFood2Img]
+        : project.name === "Bajaj Auto Pvt Ltd"
+          ? [bajaj1Img, bajaj2Img, bajaj3Img]
+        : project.name === "Microsoft Hayatabad"
+          ? [microsoft1Img, microsoft2Img]
         : [project.image];
 
   return (
@@ -157,9 +200,6 @@ const ProjectDetail = () => {
                       }`}
                     >
                       {project.status}
-                    </span>
-                    <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                      Price: {project.value}
                     </span>
                   </div>
 

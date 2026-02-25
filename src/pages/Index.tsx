@@ -101,7 +101,7 @@ const Index = () => {
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           <CounterNumber target={15} label="Years Experience" />
           <CounterNumber target={40} label="Projects Completed" />
-          <CounterNumber target={30} suffix=" CR+" label="Project Value" />
+          <CounterNumber target={12} label="Industrial Clients" />
           <CounterNumber target={17} label="Staff Members" />
         </div>
       </section>
@@ -210,8 +210,7 @@ const Index = () => {
                     <img src={p.image} alt={`Ariv Buildcon ${p.name} project`} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent text-accent-foreground">{p.value}</span>
-                      <h3 className="font-heading text-lg font-bold text-primary-foreground mt-2">{p.name}</h3>
+                      <h3 className="font-heading text-lg font-bold text-primary-foreground">{p.name}</h3>
                       <p className="text-xs text-primary-foreground/70">{p.location}</p>
                     </div>
                   </div>

@@ -1,14 +1,15 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import safetyHero from "@/assets/images/safety-hero.jpg";
-import safety1 from "@/assets/images/safety-1.jpg";
-import safety2 from "@/assets/images/safety-2.jpg";
-import safety3 from "@/assets/images/safety-3.jpg";
-import safety4 from "@/assets/images/safety-4.jpg";
-import safety5 from "@/assets/images/safety-5.jpg";
-import safety6 from "@/assets/images/safety-6.jpg";
 
-const safetyImages = [safety1, safety2, safety3, safety4, safety5, safety6];
+const safteyFolderModules = import.meta.glob("@/assets/images/saftey/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+const safteyFolderImages = Object.entries(safteyFolderModules)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([, src]) => src);
 
 const Safety = () => {
   return (
@@ -24,25 +25,22 @@ const Safety = () => {
                 Our Safety Standards
               </h2>
               <p className="text-muted-foreground">
-                At ARIV BUILDCON PVT. LTD., safety is not just a priority — it's a core value. We maintain the highest safety standards across all our construction sites, ensuring every worker goes home safe.
+                At ARIV BUILDCON PVT. LTD., safety is not just a priority - it's a core value. We maintain the highest safety standards across all our construction sites, ensuring every worker goes home safe.
               </p>
             </div>
           </AnimatedSection>
 
           {/* Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {safetyImages.map((img, i) => (
+            {safteyFolderImages.map((img, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="group relative rounded-2xl overflow-hidden shadow-lg">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src={img}
                     alt={`ARIV BUILDCON PVT. LTD. construction safety practices ${i + 1}`}
-                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-60 object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-primary-foreground font-heading font-bold text-lg">Safety First</p>
-                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -65,10 +63,9 @@ const Safety = () => {
           </AnimatedSection>
         </div>
       </section>
+
     </>
   );
 };
 
 export default Safety;
-
-

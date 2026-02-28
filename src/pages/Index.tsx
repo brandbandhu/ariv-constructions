@@ -9,7 +9,7 @@ import { getProjectSlug, services, projects } from "@/data/siteData";
 import hero1 from "@/assets/images/hero-construction-1.jpg";
 import hero2 from "@/assets/images/hero-construction-2.jpg";
 import hero3 from "@/assets/images/hero-construction-3.jpg";
-import ceoImg from "@/assets/images/ceo-sangram.jpg";
+import aboutCompanyImg from "@/assets/images/about company.png";
 import valuesImg from "@/assets/images/values-bg.jpg";
 
 const heroSlides = [
@@ -96,9 +96,7 @@ const Index = () => {
 
       {/* STATS */}
       <section className="section-dark py-14">
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          <CounterNumber target={15} label="Years Experience" />
-          <CounterNumber target={40} label="Projects Completed" />
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-2 gap-8">
           <CounterNumber target={12} label="Industrial Clients" />
           <CounterNumber target={17} label="Staff Members" />
         </div>
@@ -108,12 +106,12 @@ const Index = () => {
       <section className="py-20 section-light">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
-            <img src={ceoImg} alt="Sangram Gunjal CEO ARIV BUILDCON PVT. LTD." className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
+            <img src={aboutCompanyImg} alt="ARIV BUILDCON PVT. LTD. company overview" className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
           </AnimatedSection>
           <AnimatedSection direction="right">
             <span className="text-accent font-semibold uppercase text-sm tracking-wider">Welcome To ARIV BUILDCON PVT. LTD.</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-5">
-              Premier Construction Company
+              Rajendra Paman Gunjal
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               ARIV BUILDCON PVT. LTD. is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.

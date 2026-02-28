@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BackToTopFloat from "@/components/BackToTopFloat";
+import SEOManager from "@/components/SEOManager";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <SEOManager />
         <Navbar />
         <main className="min-h-screen">
           <Routes>

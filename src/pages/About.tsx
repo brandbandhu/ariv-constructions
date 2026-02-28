@@ -10,7 +10,7 @@ const About = () => {
   const [activeFlip, setActiveFlip] = useState<number | null>(null);
   const leadershipTeam = [
     {
-      name: "Rajendra Parman Gunjal",
+      name: "Rajendra Paman Gunjal",
       designation: "Director",
       description:
         "Leads strategic growth, governance, and delivery excellence across the organization.",

@@ -109,10 +109,9 @@ const Index = () => {
             <img src={aboutCompanyImg} alt="ARIV BUILDCON PVT. LTD. company overview" className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <span className="text-accent font-semibold uppercase text-sm tracking-wider">Welcome To ARIV BUILDCON PVT. LTD.</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-5">
-              Rajendra Paman Gunjal
-            </h2>
+            <span className="text-accent font-semibold uppercase text-xl md:text-2xl tracking-wider block mb-5">
+              Welcome To ARIV BUILDCON PVT. LTD.
+            </span>
             <p className="text-muted-foreground leading-relaxed mb-6">
               ARIV BUILDCON PVT. LTD. is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>

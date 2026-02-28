@@ -9,8 +9,6 @@ import excavatorImg from "@/assets/images/excavator.jpg";
 import machineImg from "@/assets/images/machine .png";
 
 const fleetImages = [rmcImg, machineImg, excavatorImg];
-const topRowMachinery = machinery.slice(0, 4);
-const bottomRowMachinery = machinery.slice(4);
 
 const getMachineryIcon = (name: string) => {
   if (name.includes("RMC Plant")) return Factory;
@@ -48,39 +46,21 @@ const Fleet = () => {
           </div>
 
           {/* Machinery cards */}
-          <div className="space-y-5">
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {topRowMachinery.map((m, i) => {
-                const Icon = getMachineryIcon(m.name);
-                return (
-                  <AnimatedSection key={m.name} delay={i * 0.05}>
-                    <div className="group rounded-2xl border border-primary/10 bg-card px-6 py-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <div className="mb-2 text-4xl font-heading font-bold leading-none text-accent">{m.count}</div>
-                      <p className="text-sm font-semibold text-primary">{m.name}</p>
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {machinery.map((m, i) => {
+              const Icon = getMachineryIcon(m.name);
+              return (
+                <AnimatedSection key={m.name} delay={i * 0.04}>
+                  <div className="group rounded-xl border border-primary/10 bg-card px-4 py-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent">
+                      <Icon className="h-5 w-5" />
                     </div>
-                  </AnimatedSection>
-                );
-              })}
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {bottomRowMachinery.map((m, i) => {
-                const Icon = getMachineryIcon(m.name);
-                return (
-                  <AnimatedSection key={m.name} delay={(i + 4) * 0.05}>
-                    <div className="group rounded-2xl border border-primary/10 bg-card px-6 py-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <div className="mb-2 text-4xl font-heading font-bold leading-none text-accent">{m.count}</div>
-                      <p className="text-sm font-semibold text-primary">{m.name}</p>
-                    </div>
-                  </AnimatedSection>
-                );
-              })}
-            </div>
+                    <div className="mb-1 text-3xl font-heading font-bold leading-none text-accent">{m.count}</div>
+                    <p className="text-center text-sm font-semibold text-primary">{m.name}</p>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>

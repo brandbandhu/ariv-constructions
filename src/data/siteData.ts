@@ -87,21 +87,23 @@ export const services = [
 export const machinery = [
   { name: "RMC Plant CP30", count: 1 },
   { name: "Concrete Pump", count: 1 },
-  { name: "Excavator (210/130)", count: 3 },
+  { name: "Excavator (210/130)", count: 4 },
   { name: "Concrete Mixer", count: 6 },
   { name: "Excavator Breaker", count: 3 },
-  { name: "Tipper", count: 5 },
+  { name: "Tippers", count: 10 },
   { name: "JCB", count: 2 },
+  { name: "Roller", count: 1 },
+  { name: "Grader", count: 1 },
 ];
 
 export const staff = [
-  { role: "Site Engineers", count: 4 },
+  { role: "Site Engineers", count: 5 },
   { role: "Quality Management", count: 2 },
   { role: "Design Capabilities", count: 1 },
   { role: "Safety Management", count: 3 },
   { role: "Office Staff", count: 4 },
-  { role: "Mechanical Capabilities", count: 1 },
-  { role: "Site Supervisor/Foremen", count: 2 },
+  { role: "Mechanical Capabilities", count: 3 },
+  { role: "Site Supervisor / Foremen", count: 5 },
 ];
 
 export const navLinks = [

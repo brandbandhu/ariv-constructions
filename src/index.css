@@ -69,6 +69,11 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
+  p, li {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold tracking-tight;
   }

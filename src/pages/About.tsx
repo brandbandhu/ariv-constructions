@@ -8,6 +8,30 @@ import ceoImg from "@/assets/images/ceo-sangram.jpg";
 
 const About = () => {
   const [activeFlip, setActiveFlip] = useState<number | null>(null);
+  const leadershipTeam = [
+    {
+      name: "Rajendra Parman Gunjal",
+      designation: "Director",
+      description:
+        "Leads strategic growth, governance, and delivery excellence across the organization.",
+      image: ceoImg,
+    },
+    {
+      name: "Sangram Rajendra Gunjal",
+      designation: "Director",
+      description:
+        "Oversees project execution, client coordination, and operational performance.",
+      image: ceoImg,
+    },
+    {
+      name: "Omkar Rajendra Gunjal",
+      designation: "Director",
+      description:
+        "Drives engineering quality, planning discipline, and continuous improvement.",
+      image: ceoImg,
+    },
+  ];
+
   const visionMissionCards = [
     {
       title: "Our Vision",
@@ -29,11 +53,9 @@ const About = () => {
 
       {/* Welcome */}
       <section className="py-20">
-        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <AnimatedSection direction="left">
-            <img src={ceoImg} alt="Sangram Gunjal CEO Ariv Buildcon" className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
-          </AnimatedSection>
-          <AnimatedSection direction="right">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="text-center max-w-4xl mx-auto">
             <span className="text-accent font-semibold uppercase text-sm tracking-wider">Who We Are</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-5">
               Welcome To Our Company
@@ -41,11 +63,26 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               Ariv Buildcon is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>
-            <div className="glass-card-light p-6 mb-6">
-              <p className="font-heading text-xl font-bold text-primary">Sangram Gunjal</p>
-              <p className="text-accent font-semibold text-sm">CEO & Founder</p>
             </div>
           </AnimatedSection>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
+            {leadershipTeam.map((member, i) => (
+              <AnimatedSection key={member.name} delay={i * 0.08}>
+                <div className="glass-card-light p-5 h-full">
+                  <img
+                    src={member.image}
+                    alt={`${member.name} ${member.designation}`}
+                    className="w-full h-64 object-cover rounded-xl mb-4"
+                    loading="lazy"
+                  />
+                  <p className="text-left font-heading text-xl font-bold text-primary">{member.name}</p>
+                  <p className="mt-1 text-left text-sm font-semibold text-accent">{member.designation}</p>
+                  <p className="mt-3 text-left text-sm leading-relaxed text-muted-foreground">{member.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 

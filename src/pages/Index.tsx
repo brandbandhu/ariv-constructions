@@ -118,10 +118,6 @@ const Index = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               Ariv Buildcon is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>
-            <div className="glass-card-light p-5 inline-block">
-              <p className="font-heading text-lg font-bold text-primary">Sangram Gunjal</p>
-              <p className="text-sm text-muted-foreground">CEO & Founder</p>
-            </div>
             <div className="mt-6">
               <Link to="/about" className="gradient-accent px-6 py-3 rounded-lg font-bold text-accent-foreground inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
                 Learn More <ArrowRight className="h-4 w-4" />

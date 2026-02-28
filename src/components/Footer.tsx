@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import arivLogo from "@/assets/images/logo.png";
 
@@ -83,19 +83,25 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                info@arivbuildcon.com
+                office@arvibuildcon.com
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-primary-foreground/50">
-            © {new Date().getFullYear()} Ariv Buildcon. All rights reserved.
-          </p>
-          <p className="text-xs text-primary-foreground/50">
-            CEO: Sangram Gunjal | Excellence · Integrity · Safety · Sustainability
+        <div className="mt-12 flex items-center justify-center border-t border-primary-foreground/10 pt-8">
+          <p className="text-center text-xs text-primary-foreground/50">
+            &copy; 2026 Ariv Buildcon. All rights reserved by{" "}
+            <a
+              href="https://webakoof.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-accent hover:underline"
+            >
+              Webakoof
+            </a>
+            .
           </p>
         </div>
       </div>
@@ -104,3 +110,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

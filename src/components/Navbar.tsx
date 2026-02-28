@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="gradient-primary py-2 hidden md:block">
         <div className="container mx-auto flex items-center justify-between text-sm">
           <div className="flex items-center gap-6 text-primary-foreground/80">
-            <span>📧 info@arivbuildcon.com</span>
+            <span>📧 office@arvibuildcon.com</span>
             <span>📍 Maharashtra, India</span>
           </div>
           <div className="flex items-center gap-2 text-primary-foreground">

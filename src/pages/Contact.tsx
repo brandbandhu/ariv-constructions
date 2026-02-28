@@ -68,7 +68,7 @@ const Contact = () => {
                 {[
                   { icon: MapPin, label: "Address", value: "Maharashtra, India" },
                   { icon: Phone, label: "Phone", value: "+91 XXXXXXXXXX" },
-                  { icon: Mail, label: "Email", value: "info@arivbuildcon.com" },
+                  { icon: Mail, label: "Email", value: "office@arvibuildcon.com" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">
                     <div className="gradient-accent w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">

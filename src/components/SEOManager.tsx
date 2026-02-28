@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { getProjectSlug, projects } from "@/data/siteData";
 
 const SITE_NAME = "ARIV BUILDCON PVT. LTD.";
+const PRIMARY_SITE_URL = "https://arivbuildcon.com";
 const DEFAULT_DESCRIPTION =
   "ARIV BUILDCON PVT. LTD. is a premier industrial construction company in India offering turnkey solutions, project management, structural work, and heavy machinery services.";
 const DEFAULT_KEYWORDS =
@@ -126,14 +127,21 @@ const SEOManager = () => {
 
   useEffect(() => {
     const seo = getSeoForPath(pathname);
-    const origin = window.location.origin;
-    const canonicalUrl = `${origin}${pathname}`;
-    const imageUrl = `${origin}/favicon.ico`;
+    const hostname = window.location.hostname.toLowerCase();
+    const isPreviewHost =
+      hostname.endsWith(".vercel.app") || hostname === "localhost" || hostname === "127.0.0.1";
+
+    const canonicalUrl = `${PRIMARY_SITE_URL}${pathname}`;
+    const imageUrl = `${PRIMARY_SITE_URL}/favicon.ico`;
 
     document.title = seo.title;
     upsertMeta("name", "description", seo.description);
     upsertMeta("name", "keywords", seo.keywords ?? DEFAULT_KEYWORDS);
-    upsertMeta("name", "robots", seo.noindex ? "noindex, nofollow" : "index, follow");
+    upsertMeta(
+      "name",
+      "robots",
+      seo.noindex || isPreviewHost ? "noindex, nofollow" : "index, follow"
+    );
 
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:site_name", SITE_NAME);

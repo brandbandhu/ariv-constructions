@@ -42,7 +42,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="absolute inset-0"
           >
-            <img src={heroSlides[current].image} alt="Ariv Buildcon construction site" className="w-full h-full object-cover" />
+            <img src={heroSlides[current].image} alt="ARIV BUILDCON PVT. LTD. construction site" className="w-full h-full object-cover" />
             <div className="gradient-hero-overlay absolute inset-0" />
           </motion.div>
         </AnimatePresence>
@@ -108,15 +108,15 @@ const Index = () => {
       <section className="py-20 section-light">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
-            <img src={ceoImg} alt="Sangram Gunjal CEO Ariv Buildcon" className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
+            <img src={ceoImg} alt="Sangram Gunjal CEO ARIV BUILDCON PVT. LTD." className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <span className="text-accent font-semibold uppercase text-sm tracking-wider">Welcome To Ariv Buildcon</span>
+            <span className="text-accent font-semibold uppercase text-sm tracking-wider">Welcome To ARIV BUILDCON PVT. LTD.</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-5">
               Premier Construction Company
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Ariv Buildcon is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
+              ARIV BUILDCON PVT. LTD. is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>
             <div className="mt-6">
               <Link to="/about" className="gradient-accent px-6 py-3 rounded-lg font-bold text-accent-foreground inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
@@ -163,7 +163,7 @@ const Index = () => {
 
       {/* VALUES */}
       <section className="relative py-24 overflow-hidden">
-        <img src={valuesImg} alt="Ariv Buildcon construction values" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={valuesImg} alt="ARIV BUILDCON PVT. LTD. construction values" className="absolute inset-0 w-full h-full object-cover" />
         <div className="gradient-hero-overlay absolute inset-0" />
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
@@ -172,7 +172,7 @@ const Index = () => {
                 Building For <span className="text-gradient-accent">Excellence</span>
               </h2>
               <p className="text-primary-foreground/70 mt-4 max-w-2xl mx-auto">
-                At Ariv Buildcon, we recognize that heavy construction is more than just the assembly of steel and concrete; it is the backbone of progress.
+                At ARIV BUILDCON PVT. LTD., we recognize that heavy construction is more than just the assembly of steel and concrete; it is the backbone of progress.
               </p>
             </div>
           </AnimatedSection>
@@ -209,7 +209,7 @@ const Index = () => {
               <AnimatedSection key={p.name} delay={i * 0.08}>
                 <Link to={`/projects/${getProjectSlug(p.name)}`} className="block">
                   <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <img src={p.image} alt={`Ariv Buildcon ${p.name} project`} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={p.image} alt={`ARIV BUILDCON PVT. LTD. ${p.name} project`} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <h3 className="font-heading text-lg font-bold text-primary-foreground">{p.name}</h3>
@@ -249,3 +249,5 @@ const Index = () => {
 };
 
 export default Index;
+
+

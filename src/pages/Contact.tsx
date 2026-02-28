@@ -45,7 +45,7 @@ const Contact = () => {
 
     // WhatsApp redirect
     const msg = encodeURIComponent(
-      `Hello Ariv Buildcon!\n\nName: ${form.name}\nCompany: ${form.company}\nPhone: ${form.phone}\nEmail: ${form.email}\nProject Type: ${form.projectType}\nMessage: ${form.message}`
+      `Hello ARIV BUILDCON PVT. LTD.!\n\nName: ${form.name}\nCompany: ${form.company}\nPhone: ${form.phone}\nEmail: ${form.email}\nProject Type: ${form.projectType}\nMessage: ${form.message}`
     );
     window.open(`https://wa.me/91XXXXXXXXXX?text=${msg}`, "_blank");
     setSubmitted(true);
@@ -163,3 +163,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+

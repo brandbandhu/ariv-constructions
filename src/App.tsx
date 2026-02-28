@@ -15,6 +15,8 @@ import Safety from "./pages/Safety";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import BackToTopFloat from "@/components/BackToTopFloat";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <BackToTopFloat />
+        <WhatsAppFloat />
         <Footer />
       </BrowserRouter>
     </TooltipProvider>

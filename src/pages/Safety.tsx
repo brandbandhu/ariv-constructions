@@ -24,7 +24,7 @@ const Safety = () => {
                 Our Safety Standards
               </h2>
               <p className="text-muted-foreground">
-                At Ariv Buildcon, safety is not just a priority — it's a core value. We maintain the highest safety standards across all our construction sites, ensuring every worker goes home safe.
+                At ARIV BUILDCON PVT. LTD., safety is not just a priority — it's a core value. We maintain the highest safety standards across all our construction sites, ensuring every worker goes home safe.
               </p>
             </div>
           </AnimatedSection>
@@ -36,7 +36,7 @@ const Safety = () => {
                 <div className="group relative rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src={img}
-                    alt={`Ariv Buildcon construction safety practices ${i + 1}`}
+                    alt={`ARIV BUILDCON PVT. LTD. construction safety practices ${i + 1}`}
                     className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -52,7 +52,7 @@ const Safety = () => {
 
       {/* Commitment banner */}
       <section className="relative py-24 overflow-hidden">
-        <img src={safetyHero} alt="Safety commitment at Ariv Buildcon" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={safetyHero} alt="Safety commitment at ARIV BUILDCON PVT. LTD." className="absolute inset-0 w-full h-full object-cover" />
         <div className="gradient-hero-overlay absolute inset-0" />
         <div className="container mx-auto relative z-10 text-center">
           <AnimatedSection>
@@ -70,3 +70,5 @@ const Safety = () => {
 };
 
 export default Safety;
+
+

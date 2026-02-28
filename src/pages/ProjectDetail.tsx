@@ -214,7 +214,7 @@ const ProjectDetail = () => {
                     </div>
                     <div className="flex items-start gap-2">
                       <CircleCheckBig className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <p>Delivered by Ariv Buildcon&apos;s experienced industrial construction team.</p>
+                      <p>Delivered by ARIV BUILDCON PVT. LTD.&apos;s experienced industrial construction team.</p>
                     </div>
                   </div>
                 </div>
@@ -241,3 +241,5 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+
+

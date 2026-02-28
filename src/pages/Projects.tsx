@@ -42,7 +42,7 @@ const Projects = () => {
                   <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
                     <img
                       src={p.image}
-                      alt={`Ariv Buildcon ${p.name} industrial construction project`}
+                      alt={`ARIV BUILDCON PVT. LTD. ${p.name} industrial construction project`}
                       className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -75,3 +75,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+

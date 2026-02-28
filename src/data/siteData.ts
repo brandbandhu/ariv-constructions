@@ -17,7 +17,7 @@ import serviceTurnkeyImg from "@/assets/images/hero-construction-1.jpg";
 import serviceProjectMgmtImg from "@/assets/images/hero-construction-2.jpg";
 import serviceMachineryImg from "@/assets/images/machine .png";
 import serviceDesignBuildImg from "@/assets/images/about-hero.jpg";
-import serviceFabricationImg from "@/assets/images/fabrication.png";
+import serviceStructureImg from "@/assets/images/fabrication.png";
 
 export interface Project {
   name: string;
@@ -36,7 +36,7 @@ export const getProjectSlug = (projectName: string) =>
 export const projects: Project[] = [
   { name: "Datwayler Pharma", location: "Maharashtra", year: "Ongoing", image: datwaylerImg, status: "Ongoing" },
   { name: "Balasaheb Deoras Rugnalay", location: "Maharashtra", year: "Ongoing", image: balasahebImg, status: "Ongoing" },
-  { name: "Nichino India Pvt Ltd", location: "Maharashtra", year: "Ongoing", image: nichinoImg, status: "Ongoing" },
+  { name: "Nichino India Pvt Ltd", location: "Humnabad Karnataka", year: "Ongoing", image: nichinoImg, status: "Ongoing" },
   { name: "SRIMS Medical College", location: "Sambhajinagar", image: srimsImg, status: "Completed" },
   { name: "Monin Hyderabad", location: "Hyderabad", image: moninImg, status: "Completed" },
   { name: "Bridgestone Chakan", location: "Chakan", year: "2011", image: bridgestoneImg, status: "Completed" },
@@ -77,10 +77,10 @@ export const services = [
     image: serviceDesignBuildImg,
   },
   {
-    title: "Fabrication",
-    description: "Delivering reliable structural and custom fabrication solutions with precision engineering and quality workmanship.",
+    title: "Structural Work",
+    description: "Delivering reliable structural and custom structural solutions with precision engineering and quality workmanship.",
     icon: "Building2" as const,
-    image: serviceFabricationImg,
+    image: serviceStructureImg,
   },
 ];
 
@@ -115,3 +115,6 @@ export const navLinks = [
   { name: "Safety", path: "/safety" },
   { name: "Contact", path: "/contact" },
 ];
+
+
+

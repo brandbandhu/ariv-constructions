@@ -36,7 +36,7 @@ const About = () => {
     {
       title: "Our Vision",
       description:
-        "At Ariv Buildcon, our vision is to be the foremost leader in the construction industry, known for our innovative solutions, exceptional quality, and unwavering commitment to sustainability. We aspire to build not just structures, but lasting legacies that enhance the landscapes of India and improve the lives of the communities we serve.",
+        "At ARIV BUILDCON PVT. LTD., our vision is to be the foremost leader in the construction industry, known for our innovative solutions, exceptional quality, and unwavering commitment to sustainability. We aspire to build not just structures, but lasting legacies that enhance the landscapes of India and improve the lives of the communities we serve.",
       Icon: Eye,
     },
     {
@@ -61,7 +61,7 @@ const About = () => {
               Welcome To Our Company
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Ariv Buildcon is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
+              ARIV BUILDCON PVT. LTD. is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>
             </div>
           </AnimatedSection>
@@ -148,3 +148,5 @@ const About = () => {
 };
 
 export default About;
+
+

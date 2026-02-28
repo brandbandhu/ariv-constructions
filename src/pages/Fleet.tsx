@@ -40,7 +40,7 @@ const Fleet = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-14">
             {fleetImages.map((img, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <img src={img} alt="Ariv Buildcon heavy machinery equipment" className="rounded-2xl shadow-lg w-full h-56 object-cover hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                <img src={img} alt="ARIV BUILDCON PVT. LTD. heavy machinery equipment" className="rounded-2xl shadow-lg w-full h-56 object-cover hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
               </AnimatedSection>
             ))}
           </div>
@@ -87,3 +87,5 @@ const Fleet = () => {
 };
 
 export default Fleet;
+
+

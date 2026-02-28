@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import arivLogo from "@/assets/images/logo.png";
 
@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <img src={arivLogo} alt="Ariv Buildcon Logo" className="h-10 w-auto rounded" />
-              <span className="text-xl font-heading font-bold text-primary-foreground">ARIV BUILDCON</span>
+              <img src={arivLogo} alt="ARIV BUILDCON PVT. LTD. Logo" className="h-10 w-auto rounded" />
+              <span className="text-xl font-heading font-bold text-primary-foreground">ARIV BUILDCON PVT. LTD.</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               A premier construction company specializing in large-scale industrial projects across India with unwavering commitment to quality and innovation.
@@ -92,7 +92,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 flex items-center justify-center border-t border-primary-foreground/10 pt-8">
           <p className="text-center text-xs text-primary-foreground/50">
-            &copy; 2026 Ariv Buildcon. All rights reserved by{" "}
+            &copy; 2026 ARIV BUILDCON PVT. LTD. All rights reserved by{" "}
             <a
               href="https://webakoof.com"
               target="_blank"
@@ -110,4 +110,9 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
 

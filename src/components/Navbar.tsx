@@ -45,10 +45,10 @@ const Navbar = () => {
       >
         <div className="container mx-auto flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-3">
-            <img src={arivLogo} alt="Ariv Buildcon Logo" className="h-12 w-auto rounded" />
+            <img src={arivLogo} alt="ARIV BUILDCON PVT. LTD. Logo" className="h-12 w-auto rounded" />
             <div>
               <span className="text-xl font-heading font-bold text-primary block leading-tight">
-                ARIV BUILDCON
+                ARIV BUILDCON PVT. LTD.
               </span>
               <span className="text-[10px] uppercase tracking-[3px] text-muted-foreground">
                 Building For Values
@@ -108,3 +108,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+

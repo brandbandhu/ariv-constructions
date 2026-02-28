@@ -5,7 +5,7 @@ import { getProjectSlug, projects } from "@/data/siteData";
 const SITE_NAME = "ARIV BUILDCON PVT. LTD.";
 const PRIMARY_SITE_URL = "https://arivbuildcon.com";
 const DEFAULT_DESCRIPTION =
-  "ARIV BUILDCON PVT. LTD. is a premier industrial construction company in India offering turnkey solutions, project management, structural work, and heavy machinery services.";
+  "ARIV BUILDCON PVT. LTD. is an industrial construction company in India offering turnkey solutions, project management, structural work, and heavy machinery services.";
 const DEFAULT_KEYWORDS =
   "ARIV BUILDCON PVT. LTD., Ariv Buildcon, industrial construction company India, turnkey construction, project management, heavy machinery rental, structural work, Maharashtra construction company";
 
@@ -43,7 +43,7 @@ const getSeoForPath = (pathname: string): SeoData => {
       description:
         "ARIV BUILDCON PVT. LTD. delivers industrial construction excellence across India with turnkey solutions, trusted project execution, and high safety standards.",
       keywords:
-        "ARIV BUILDCON PVT. LTD., premier construction company India, industrial projects, turnkey solutions, heavy construction",
+        "ARIV BUILDCON PVT. LTD., construction company India, industrial projects, turnkey solutions, heavy construction",
     };
   }
 
@@ -162,3 +162,4 @@ const SEOManager = () => {
 };
 
 export default SEOManager;
+

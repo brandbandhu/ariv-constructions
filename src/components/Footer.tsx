@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-xl font-heading font-bold text-primary-foreground">ARIV BUILDCON PVT. LTD.</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              A premier construction company specializing in large-scale industrial projects across India with unwavering commitment to quality and innovation.
+              A construction company specializing in large-scale industrial projects across India with unwavering commitment to quality and innovation.
             </p>
           </div>
 
@@ -110,6 +110,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 

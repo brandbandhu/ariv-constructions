@@ -61,7 +61,7 @@ const About = () => {
               Welcome To Our Company
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              ARIV BUILDCON PVT. LTD. is a premier construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
+              ARIV BUILDCON PVT. LTD. is a construction company specializing in the development of large-scale projects across various regions in India. With a strong emphasis on quality, innovation, and efficiency, we deliver comprehensive turnkey solutions that cater to the diverse needs of our clients.
             </p>
             </div>
           </AnimatedSection>
@@ -148,5 +148,6 @@ const About = () => {
 };
 
 export default About;
+
 
 

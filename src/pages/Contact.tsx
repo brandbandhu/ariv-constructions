@@ -15,6 +15,7 @@ const contactSchema = z.object({
 });
 
 const Contact = () => {
+  const WEB3FORMS_ACCESS_KEY = "3861588b-654f-4bb1-9efa-68d219697639";
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -25,14 +26,17 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
     const result = contactSchema.safeParse(form);
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -43,12 +47,48 @@ const Contact = () => {
       return;
     }
 
-    // WhatsApp redirect
-    const msg = encodeURIComponent(
-      `Hello ARIV BUILDCON PVT. LTD.!\n\nName: ${form.name}\nCompany: ${form.company}\nPhone: ${form.phone}\nEmail: ${form.email}\nProject Type: ${form.projectType}\nMessage: ${form.message}`
-    );
-    window.open(`https://wa.me/91XXXXXXXXXX?text=${msg}`, "_blank");
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      const payload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "New Enquiry - ARIV BUILDCON PVT. LTD.",
+        from_name: form.name,
+        name: form.name,
+        company: form.company || "N/A",
+        phone: form.phone,
+        email: form.email,
+        projectType: form.projectType || "N/A",
+        message: form.message,
+      };
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+        setForm({
+          name: "",
+          company: "",
+          phone: "",
+          email: "",
+          projectType: "",
+          message: "",
+        });
+      } else {
+        setSubmitError("Failed to send enquiry. Please try again.");
+      }
+    } catch {
+      setSubmitError("Failed to send enquiry. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -150,8 +190,9 @@ const Contact = () => {
                   </div>
 
                   <button type="submit" className="w-full gradient-accent py-3.5 rounded-lg font-bold text-accent-foreground shadow-md hover:shadow-lg transition-shadow flex items-center justify-center gap-2">
-                    <Send className="h-4 w-4" /> Send Enquiry via WhatsApp
+                    <Send className="h-4 w-4" /> {isSubmitting ? "Sending..." : "Send Enquiry"}
                   </button>
+                  {submitError && <p className="text-destructive text-sm text-center">{submitError}</p>}
                 </form>
               )}
             </AnimatedSection>

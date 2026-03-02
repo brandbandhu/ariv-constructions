@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ariv-constructions.vercel.app"
+        }
+      ],
+      "destination": "https://arivbuildcon.com/:path*",
+      "permanent": true
+    }
+  ]
+}

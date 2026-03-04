@@ -9,7 +9,7 @@ import { getProjectSlug, services, projects } from "@/data/siteData";
 import hero1 from "@/assets/images/hero-construction-1.jpg";
 import hero2 from "@/assets/images/hero-construction-2.jpg";
 import hero3 from "@/assets/images/hero-construction-3.jpg";
-import aboutCompanyImg from "@/assets/images/about company.png";
+import aboutCompanyImg from "@/assets/images/about .png";
 import valuesImg from "@/assets/images/values-bg.jpg";
 
 const heroSlides = [
@@ -106,7 +106,11 @@ const Index = () => {
       <section className="py-20 section-light">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection direction="left">
-            <img src={aboutCompanyImg} alt="ARIV BUILDCON PVT. LTD. company overview" className="rounded-2xl shadow-xl w-full max-w-md mx-auto" />
+            <img
+              src={aboutCompanyImg}
+              alt="ARIV BUILDCON PVT. LTD. company overview"
+              className="rounded-2xl border border-black/15 shadow-xl w-full max-w-md mx-auto"
+            />
           </AnimatedSection>
           <AnimatedSection direction="right">
             <span className="text-accent font-semibold uppercase text-xl md:text-2xl tracking-wider block mb-5">

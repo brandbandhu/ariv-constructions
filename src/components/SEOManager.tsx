@@ -132,7 +132,7 @@ const SEOManager = () => {
       hostname.endsWith(".vercel.app") || hostname === "localhost" || hostname === "127.0.0.1";
 
     const canonicalUrl = `${PRIMARY_SITE_URL}${pathname}`;
-    const imageUrl = `${PRIMARY_SITE_URL}/favicon.ico`;
+    const imageUrl = new URL("/preview.png", window.location.origin).toString();
 
     document.title = seo.title;
     upsertMeta("name", "description", seo.description);

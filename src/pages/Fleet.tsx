@@ -4,11 +4,15 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { Factory, Hammer, Shovel, Truck, Wrench } from "lucide-react";
 import { machinery, staff } from "@/data/siteData";
 import heroImg from "@/assets/images/hero-construction-3.jpg";
-import rmcImg from "@/assets/images/rmc-plant.jpg";
+import truckImg from "@/assets/images/machineryy-truck.png";
 import excavatorImg from "@/assets/images/excavator.jpg";
 import machineImg from "@/assets/images/machine .png";
 
-const fleetImages = [rmcImg, machineImg, excavatorImg];
+const fleetImages = [
+  { src: truckImg, cropClass: "object-[center_68%]" },
+  { src: machineImg, cropClass: "object-center" },
+  { src: excavatorImg, cropClass: "object-center" },
+];
 
 const getMachineryIcon = (name: string) => {
   if (name.includes("RMC Plant")) return Factory;
@@ -40,7 +44,12 @@ const Fleet = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-14">
             {fleetImages.map((img, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <img src={img} alt="ARIV BUILDCON PVT. LTD. heavy machinery equipment" className="rounded-2xl shadow-lg w-full h-56 object-cover hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                <img
+                  src={img.src}
+                  alt="ARIV BUILDCON PVT. LTD. heavy machinery equipment"
+                  className={`rounded-2xl shadow-lg w-full h-56 object-cover ${img.cropClass} hover:scale-[1.02] transition-transform duration-300`}
+                  loading="lazy"
+                />
               </AnimatedSection>
             ))}
           </div>

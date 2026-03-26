@@ -1,4 +1,4 @@
-const WHATSAPP_LINK = "https://wa.me/91XXXXXXXXXX";
+import { WHATSAPP_LINK } from "@/data/siteData";
 
 const WhatsAppFloat = () => {
   return (

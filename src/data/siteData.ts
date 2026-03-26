@@ -116,5 +116,9 @@ export const navLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
+export const CONTACT_PHONE_DISPLAY = "+91 95618 30922";
+export const CONTACT_PHONE_E164 = "+919561830922";
+export const WHATSAPP_LINK = "https://wa.me/919561830922";
+
 
 

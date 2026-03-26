@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import heroImg from "@/assets/images/about-hero.jpg";
 import { z } from "zod";
+import { CONTACT_PHONE_DISPLAY } from "@/data/siteData";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -107,7 +108,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {[
                   { icon: MapPin, label: "Address", value: "Maharashtra, India" },
-                  { icon: Phone, label: "Phone", value: "+91 XXXXXXXXXX" },
+                  { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY },
                   { icon: Mail, label: "Email", value: "office@arivbuildcon.com" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import arivLogo from "@/assets/images/logo.png";
+import { CONTACT_PHONE_DISPLAY } from "@/data/siteData";
 
 const Footer = () => {
   return (
@@ -79,7 +80,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                +91 XXXXXXXXXX
+                {CONTACT_PHONE_DISPLAY}
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import { navLinks } from "@/data/siteData";
+import { navLinks, CONTACT_PHONE_DISPLAY } from "@/data/siteData";
 import arivLogo from "@/assets/images/logo.png";
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2 text-primary-foreground">
             <Phone className="h-3.5 w-3.5" />
-            <span className="font-semibold">+91 XXXXXXXXXX</span>
+            <span className="font-semibold">{CONTACT_PHONE_DISPLAY}</span>
           </div>
         </div>
       </div>
